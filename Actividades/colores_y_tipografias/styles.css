@@ -22,7 +22,7 @@
 
   /* ---- 1. COLOR DE FONDO GENERAL ----
      El fondo de la página y de las secciones "normales". */
-  --color-fondo: #b69651;
+  --color-fondo: #fcfaf6;
 
   /* ---- 2. COLOR DE FONDO ALTERNO ----
      Para secciones que quieres diferenciar del fondo general
@@ -57,7 +57,23 @@
 
   /* ---- 7. TIPOGRAFÍA ----
      --font-titulos se usa en h1, h2, h3.
+      - 'Fraunces' (Primera opción): Fuente moderna con remates (serif). Si está
+        importad vía Google Fonts o @font-face, el navegador la usará como prioridad.
+      - Georgia (Reserva del sistema): Si 'Fraunces' falla o aún no se he descargado,
+        usará Georgia, una fuente muy extendida y presente por defectoen casi todos 
+        los sistemas (Windows, macOS, iOS).
+      - serif (Reserva genérica): Si ninguna de las dos anteriores está disponible, 
+        el sistema cargará su fuente serif predeterminada (como Times New Roman).
+
      --font-cuerpo se usa en párrafos, botones y menú.
+      - 'Inter' (Primera opción): Una de las fuentes web sans-serif más populares 
+        para interfaces UI por su excelente legibilidad en pantallas pequeñas.
+      - system-ui (Reserva de sistema nativa): Si 'Inter' no está disponible, el 
+        navegador recurrirá a la tipografía por defecto del sistema operativo del 
+        usuario (por ejemplo, San Francisco en iOS/macOS, Segoe UI en Windows o 
+        Roboto en Android).
+      - sans-serif (Reserva genérica): La categoría genérica sin remates de último 
+        recurso (como Arial o Helvetica).
      Si cambias de tipografía, actualiza también el <link> de Google Fonts
      en el <head> de index.html. */
   --font-titulos: 'Fraunces', Georgia, serif;
@@ -67,6 +83,8 @@
      así que cambiar este valor escala toda la tipografía proporcionalmente. */
   --tamano-base: 17px;
 }
+
+
 
 /* ==========================================================================
    ESTILOS BASE
