@@ -18,28 +18,30 @@
 </head>
 <body>
 	<!-- ===================== CABECERA ===================== -->
-	<header>
-		<div class="contenedor" id="logo">
-			<a href="./inicio.html">
+	<header class="cabecera">
+		<div class="contenedor cabecera__interior">
+			<a class="marca" href="./index.html">
 				<img src="./imaxes/logosl.png">
-				<h1> CosmicMountain Studios</h1>
+				<p>CosmicMountain <br> Studios</p>
 			</a>
+			<nav class="navegacion" aria-label="Navegación principal">
+				<ul>
+					<li><a href="./index.html">Inicio</a></li>
+					<li><a href="./juegos.html">Juegos</a></li>
+					<li><a href="./noticias.html">Noticias</a></li>
+				</ul>
+			</nav>
+			<a href="https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/?l=spanish" class="adquirir">Adquirir ETS2</a>
 		</div>
-		<nav class="navegacion" aria-label="Navegación principal">
-    		<a href="./inicio.html">Inicio  </a>
-       		<a href="./juegos.html">Juegos</a>
-        	<a href="./noticias.html">Noticias</a>
-        </nav>
-    	<a href="https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/?l=spanish" id="adquirir">Adquirir ETS2</a>
    	</header>
    	
 	<main>
 		<!-- ===================== HERO ===================== -->
-		<section id="sinicio">
-			<div class="contenedor" id="rtitulo">
+		<section class="hero">
+			<div class="contenedor hero__titulo">
 				<h1>¡Guerrero de las Sombras: Entre dos Bandos!</h1>
 			</div>
-			<div id="resumen">
+			<div class="contenedor hero__texto">
 				<p>Embárcate en una odisea épica con nuestra última creación.</p>
 				<p>En un mundo asolado por la guerra, un guerrero enmascarado se alza contra la oscuridad, armado con un misterioso artefacto antiguo que otorga poderes sobrenaturales.</p>
 				<p>Enfrentándose a un conflicto entre dos facciones en guerra, nuestro héroe descubre la verdad detrás de la máscara y se ve envuelto en una trama de traiciones, criaturas místicas y tecnologías avanzadas.</p>
@@ -49,17 +51,16 @@
 			</div>
 		</section>
 
-		<!-- ===================== BLOQUES / TARJETAS ===================== -->
-		<section id="snoticias">
-			<div class="contenedor" id="tnoticias">
+		<!-- ===================== NOTICIAS ===================== -->
+		<section class="seccion">
+			<div class="contenedor">
 				<h1>Noticias</h1>
 				<hr>
-
 				<div class="rejilla-tarjetas">
 					<article class="tarjeta">
 						<a href="https://www.halowaypoint.com/news/halo-battle-for-the-blood-moon" target="_blank">
 							<img src="./imaxes/noticias/noticia1.jpg" alt="Imagen Noticia 1">
-							<div class="cnoticia">
+							<div class="ctarjeta">
 								<h2>Halo: Battle for the Blood-Moon</h2>
 								<p>“2560. The Banished have come to Suban, the blood-moon of Sanghelios, seeking to claim the unique natural resource within its vast mines: the beautiful but volatile Subanese crystals. The Swords of Sanghelios and their Spartan allies face an overwhel...</p>
 							</div>
@@ -68,7 +69,7 @@
 					<article class="tarjeta">
 						<a href="https://www.halowaypoint.com/news/forge-features-022" target="_blank">
 							<img src="./imaxes/noticias/noticia2.jpg" alt="Imagen Noticia 2">
-							<div class="cnoticia">
+							<div class="ctarjeta">
 								<h2>Forge Features: November 22, 2023</h2>
 								<p>Would you believe we’re over a month into Season 5 already? We were floored by what folks were creating we’re not quite done yet on the fiction front!</p>
 								<p>New multiplayer map lore for Season 5’s latest additions, new Waypoint...</p>
@@ -78,7 +79,7 @@
 					<article class="tarjeta">
 						<a href="https://www.halowaypoint.com/news/canon-fodder-fly-me-to-the-blood-moon" target="_blank">
 							<img src="./imaxes/noticias/noticia3.jpg" alt="Imagen Noticia 3">
-							<div class="cnoticia">
+							<div class="ctarjeta">
 								<h2>Canon Fodder: Fly Me to the Blood-Moon</h2>
 								<p>Welcome back to this year’s penultimate issue of Canon Fodder-what a year it’s been, and we’re not quite done yet on the fiction front</p>
 								<p>New multiplayer map lore for Season 5’s latest additions, new Waypoint Chronicles and Intel, a new...</p>
@@ -88,7 +89,7 @@
 					<article class="tarjeta">
 						<a href="https://www.halowaypoint.com/news/community-corner-gcustomscreations" target="_blank">
 							<img src="./imaxes/noticias/noticia4.jpg" alt="Imagen Noticia 4">
-							<div class="cnoticia">
+							<div class="ctarjeta">
 								<h2>Community Corner: GCustomsCreations</h2>
 								<p>Welcome back, to the last 2023 issue of the Community Corner, where we spotlight and interview individual about what they get up to in the Halo community-art, cosplay, animation, streaming, Forge, and beyond.</p>
 								<p>Last time, we spoke with Aimee...</p>
@@ -98,7 +99,7 @@
 					<article class="tarjeta">
 						<a href="https://www.halowaypoint.com/news/halo-3-refueled-halo-infinite" target="_blank">
 							<img src="./imaxes/noticias/noticia5.jpg" alt="Imagen Noticia 5">
-							<div class="cnoticia">
+							<div class="ctarjeta">
 								<h2>Halo 3 Refueled | Halo Infinite</h2>
 								<p>Preferred snacks, a bottle of Game Fuel (aka Citrus Cherry Mountain Dew™️), and a controller in hand, I’m ready to play Halo like it's 2007.</p>
 								<p>Halo 3 Refueled has landed and it’s full of your old favorites… or at least the maps which might have left...</p>
@@ -106,16 +107,16 @@
 						</a>	
 					</article>
 				</div>
-			</div>
-				<div class="contenedor" id="bnoticias">
+				<div class="contenedor bnoticias">
 					<a href="./noticias.html">Ir a todas las noticias ></a>
 				</div>
+			</div>
 		</section>
     </main>
 
 	<!-- ===================== PIE DE PÁGINA ===================== -->
-	<footer>
-		<div class="contenedor"></div>
+	<footer class="pie">
+		<div class="contenedor">
 			<p>&copy; 2023 CosmicMountain Studios - Todos los derechos reservados.</p>
 		</div>
 	</footer>

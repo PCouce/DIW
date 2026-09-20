@@ -1,7 +1,22 @@
-/*header, #logo, nav, section, footer, #descarga, #pelicula, #noticias,{
-	border: solid;
-	border-color: red;
-}*/
+/* ==========================================================================
+   PLANTILLA DE PRÁCTICA — colores y tipografía
+
+   Todo lo que necesitas cambiar para experimentar con una paleta o una
+   tipografía distinta está reunido aquí arriba, en :root. El resto de la
+   hoja de estilos NO se toca: usa estas variables con var(--nombre),
+   así que basta con cambiar un valor aquí para que se actualice en toda
+   la página.
+
+   Herramientas útiles para elegir paleta:
+     - https://coolors.co
+     - https://colorhunt.co
+     - https://color.adobe.com
+
+   Herramientas útiles para elegir tipografía:
+     - https://fonts.google.com  (recuerda actualizar también el <link>
+       en el <head> del archivo index.html si cambias de tipografía)
+     - https://fontpair.co (para ver combinaciones de dos tipografías)
+   ========================================================================== */
 
 :root {
 
@@ -22,7 +37,7 @@
   /* ---- 4. COLOR DE TEXTO ----
      Texto principal y texto secundario (más apagado, para descripciones). */
   --color-texto: #ffffff;
-  --color-texto-secundario: #6B6255;
+  --color-texto-secundario: #928589;
 
   /* ---- 5. COLOR DE BOTONES ----
      Botón primario (la acción principal) y su estado al pasar el ratón,
@@ -85,9 +100,15 @@ body {
 	color: var(--color-texto);
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
 h1, h2, h3 {
   font-family: var(--font-titulos);
   font-weight: 600;
+  font-variant: small-caps;
   line-height: 1.2;
   margin: 0 0 0.5em;
 }
@@ -98,48 +119,50 @@ h3 { font-size: 1.25em; }
 
 p {
   color: var(--color-texto-secundario);
-  max-width: 65ch;
 }
 
 .contenedor {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 24px;
 }
 
 /* ==========================================================================
    CABECERA Y NAVEGACIÓN
    ========================================================================== */
 
-header { /* Cabecera */
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: var(--color-fondo); /* Color azul cósmico */
-	padding: 1em;
-}
-header a:link, a:visited, a:active{ /* Decoración enlaces cabecera */
-	text-decoration: none;
-	color: var(--color-texto);
+.cabecera {
+  background-color: var(--color-fondo);
+  top: 0;
 }
 
-#logo{ /* Texto del logo */
-	margin-left: 2%;
-	font-variant: small-caps;
+.cabecera__interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-#logo img{ /* Imagen del logo */
-	margin-top: 21px;
-	margin-right: 2%;
-	float: left;
-	width: 5em;
-	}
 
-/*nav { /* Navegación 
-	margin-right: 9%;
-	font-size: 16px;
-	padding: 1em;
-	text-align: center;
-}*/
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.marca p{
+  font-family: var(--font-titulos);
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 0;
+  color: var(--color-texto);
+}
+
+.marca img{
+  width: 80px;
+  height: auto;
+}
 
 .navegacion ul {
   list-style: none;
@@ -153,120 +176,82 @@ header a:link, a:visited, a:active{ /* Decoración enlaces cabecera */
 	padding: 20px 30px;
 	border-radius: 5px;
 	text-transform: uppercase;
-	color: var(--color-texto);
-	text-decoration: none;
 	font-weight: 500;
-	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out;
 }
 
 .navegacion a:hover {
-  	background-color: var(--color-fondo); /* Color azul más oscuro al pasar el ratón */
-  	color: #FFD700; /* Color amarillo estelar */;
+  background-color: var(--color-fondo); /* Color azul más oscuro al pasar el ratón */
+  color: #FFD700; /* Color amarillo estelar */;
 }
 
-#adquirir { /* Botón de Adquirir ETS2 */
+.adquirir { /* Botón de Adquirir ETS2 */
 	padding: 15px 30px;
-	margin-right: 4%;
-  	background-color: var(--color-boton-primario); /* Color verde */
-  	color: var(--color-texto);
-  	text-decoration: none;
-  	font-size: 18px;
-  	border-radius: 5px;
-  	transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+  background-color: var(--color-boton-primario); /* Color verde */
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
 }
-#adquirir:hover {
+.adquirir:hover {
   	background-color: var(--color-boton-primario-hover); /* Verde más oscuro al pasar el ratón */
+    transform: scale(1.04);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* ==========================================================================
    HERO
    ========================================================================== */
 
-#sinicio { /* Section de inicio */
-	height: 60em;
-	background-image: url(./imaxes/hero.jpg);
+.hero {
+  display: flex;
+  flex-direction: column;      /* Organiza los hijos verticalmente */
+  justify-content: space-between;
+  height: 1000px;
+  background-image: url(./imaxes/hero.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
-	color: var(--color-texto);
-	overflow: auto;
 }
-#rtitulo{ /* Titulo de pelicula */
+.hero__titulo { /* Titulo de pelicula */
 	background-color: rgba(10, 10, 10, 0.6);
 	border-radius: 0em 0em 50em 50em;
 	padding: 20px;
 	padding-inline: 50px;
 	text-align: center;
+  color: var(--color-texto);
 }
-#resumen{ /* Resumen de pelicula */
+.hero__texto { /* Resumen de pelicula */
 	background-color: rgba(10, 10, 10, 0.6);
 	border-radius: 9em 9em 0em 0em;
-	padding: 25px;
-	margin-top: 36em;
-	text-align: center;
+  padding: 25px;
 }
 
-/*#snoticias{ /* Section de noticias 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	padding: 20px;
-}*/
-#snoticias a:link, a:visited, a:active{ /* Enlaces de noticias de inicio */
-	text-decoration: none;
-	color: var(--color-texto);
-}
-#tnoticias{
-	font-variant: small-caps;
-	width: 100%;
+.hero__texto p {
+  text-align: center;
+  color: var(--color-texto);
 }
 
-.cnoticia{ /* Contenido de la noticia */
-	padding: 15px;
+/* ==========================================================================
+   SECCIONES
+   ========================================================================== */
+
+.seccion--alterna {
+  background-color: var(--color-fondo-alterno);
 }
-.cnoticia h2{ /* Título de la noticia */
-	font-variant: small-caps;
-}
-#bnoticias{ /* Botón de más noticias */
-	padding: 20px 30px;
+
+.bnoticias { /* Botón de más noticias */
 	border-radius: 5px;
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
 	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-#bnoticias:hover{
+
+.bnoticias:hover {
 	background-color: #002e57; /* Color azul más oscuro al pasar el ratón */
   	color: #FFD700; /* Color amarillo estelar */
-}
-
-#sjuegos{ /* Section de juegos */
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	padding: 20px;
-}
-#sjuegos a:link, a:visited, a:active{ /* Enlaces de juegos */
-	text-decoration: none;
-	color: var(--color-texto);
-}
-.juego{ /* Cajas de juegos */
-	width: 300px;
-	margin: 20px;
-	background-color: rgba(10, 10, 10, 0.6);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	border-radius: 20px;
-}
-.juego img{ /* Imágenes de juegos */
-	width: 100%;
-	height: auto;
-	border-radius: 1.25em 1.25em 0em 0em;;
-}
-.cjuego{ /* Contenido del juego */
-	padding: 15px;
-}
-.juego h2{ /* Título del juego */
-	font-variant: small-caps;
 }
 
 /* ==========================================================================
@@ -274,26 +259,35 @@ header a:link, a:visited, a:active{ /* Decoración enlaces cabecera */
    ========================================================================== */
 
 .rejilla-tarjetas {
-  	display: grid;
-  	grid-template-columns: repeat(3, 1fr);
-  	gap: 20px;
-	grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+	grid-auto-rows: minmax(0, 1fr);
 }
 
 .tarjeta {
   background-color: var(--color-bloque);
-  border: 1px solid var(--color-bloque-borde);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 10px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
   align-items: flex-start;
 }
 
-.tarjeta img{ /* Imágenes de noticias */
+.tarjeta a:hover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: scale(1.05);
+}
+
+.tarjeta img {
 	width: 100%;
 	height: auto;
-	border-radius: 1.25em 1.25em 0em 0em;;
+	border-radius: 1.25em;
+}
+
+.ctarjeta { 
+	padding: 15px;
 }
 
 .tarjeta .boton {
@@ -318,24 +312,27 @@ header a:link, a:visited, a:active{ /* Decoración enlaces cabecera */
    PIE DE PÁGINA
    ========================================================================== */
 
-footer { /* Pie de página */
-	background-color: #333;
-	color: var(--color-texto);
-	text-align: center;
-	padding: 1em;
+.pie {
+  background-color: var(--color-fondo-alterno);
+  padding: 32px 0;
+}
+
+.pie p {
+  font-size: 0.875em;
+  margin: 0;
 }
 
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .rejilla-tarjetas {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .seccion__dos-columnas {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   h1 {
@@ -344,5 +341,15 @@ footer { /* Pie de página */
 
   .navegacion ul {
     gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rejilla-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion__dos-columnas {
+    grid-template-columns: 1fr;
   }
 }
