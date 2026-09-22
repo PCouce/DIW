@@ -192,41 +192,7 @@ p {
   margin-top: 32px;
 }
 
-/* ==========================================================================
-   BOTONES
-   ========================================================================== */
 
-.boton {
-  font-family: var(--font-cuerpo);
-  font-size: 0.95em;
-  font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-.boton--primario {
-  background-color: var(--color-boton-primario);
-  color: var(--color-boton-texto);
-  border: 1px solid var(--color-boton-primario);
-}
-
-.boton--primario:hover {
-  background-color: var(--color-boton-primario-hover);
-  border-color: var(--color-boton-primario-hover);
-}
-
-.boton--secundario {
-  background-color: var(--color-boton-secundario);
-  color: var(--color-boton-secundario-texto);
-  border: 1px solid var(--color-boton-secundario-borde);
-}
-
-.boton--secundario:hover {
-  background-color: var(--color-boton-secundario-borde);
-  color: var(--color-fondo);
-}
 
 /* ==========================================================================
    SECCIONES
