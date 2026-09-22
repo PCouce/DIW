@@ -27,7 +27,7 @@
   /* ---- 2. COLOR DE FONDO ALTERNO ----
      Para secciones que quieres diferenciar del fondo general
      (ver clase .seccion--alterna en el HTML). */
-  --color-fondo-alterno: #3f3f3f;
+  --color-fondo-alterno: #00173e;
 
   /* ---- 3. COLOR DE FONDO DE BLOQUES / TARJETAS ----
      El fondo de las tarjetas de producto y del bloque destacado. */
@@ -49,7 +49,6 @@
   --color-boton-secundario: transparent;
   --color-boton-secundario-hover: #437F97;
   --color-boton-secundario-borde: #437F97;
-  --color-boton-secundario-texto: #FFB30F;
 
   /* ---- 6. COLOR DE ACENTO ---- 
      Úsalo con moderación: un detalle, no todo el fondo. Aquí se usa en el
@@ -252,6 +251,7 @@ p {
 
 .boton--secundario:hover {
   text-decoration: underline;
+  color: var(--color-acento);
 }
 
 /* ==========================================================================
@@ -268,7 +268,7 @@ p {
 
 .rejilla-tarjetas {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 	grid-auto-rows: minmax(0, 1fr);
 }
@@ -307,7 +307,7 @@ p {
    ========================================================================== */
 
 .pie {
-  background-color: var(--color-fondo-alterno);
+  background-color: var(--color-fondo);
   padding: 32px 0;
 }
 
@@ -321,9 +321,9 @@ p {
    RESPONSIVE
    ========================================================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .rejilla-tarjetas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   h1 {
@@ -333,11 +333,4 @@ p {
   .navegacion ul {
     gap: 20px;
   }
-}
-
-@media (max-width: 768px) {
-  .rejilla-tarjetas {
-    grid-template-columns: 1fr;
-  }
-
 }
