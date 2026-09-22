@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CosmicMountain Studios - Juegos</title>
+    <title>CosmicMountain Studios - Inicio</title>
 
 	<!-- Tipografías de Google Fonts: cambia estos nombres por otras que quieras
        probar. Busca más en https://fonts.google.com y sustituye tanto el
@@ -17,7 +17,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="./estilos/styles.css">
+	<link id="mi-estilo" rel="stylesheet" type="text/css" href="./estilos/styles.css">
 </head>
 <body>
 	<!-- ===================== CABECERA ===================== -->
@@ -37,12 +37,45 @@
 			<div class="boton boton--primario">
 				<a href="https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/?l=spanish">Adquirir ETS2</a>
 			</div>
+			<button onclick="cambiarEstilo()">Cambiar estilo</button>
+
+			<script>
+				// Lista de tus archivos CSS en orden
+				const estilos = ['./estilos/styles1.css', './estilos/styles2.css', './estilos/styles3.css'];
+				let indiceActual = 0;
+
+				function cambiarEstilo() {
+				// Avanza al siguiente índice (0 -> 1 -> 2 -> 0 -> 1...)
+				indiceActual = (indiceActual + 1) % estilos.length;
+				
+				// Cambia la ruta del atributo href
+				document.getElementById('mi-estilo').href = estilos[indiceActual];
+				}
+			</script>
 		</div>
    	</header>
-	
+   	
 	<main>
+		<!-- ===================== HERO ===================== -->
+		<section class="hero">
+			<div class="contenedor hero__titulo">
+				<h1>¡Guerrero de las Sombras: Entre dos Bandos!</h1>
+			</div>
+			<div class="contenedor hero__texto">
+				<p>Embárcate en una odisea épica con nuestra última creación.</p>
+				<p>En un mundo asolado por la guerra, un guerrero enmascarado se alza contra la oscuridad, armado con un misterioso artefacto antiguo que otorga poderes sobrenaturales.</p>
+				<p>Enfrentándose a un conflicto entre dos facciones en guerra, nuestro héroe descubre la verdad detrás de la máscara y se ve envuelto en una trama de traiciones, criaturas místicas y tecnologías avanzadas.</p>
+				<p>Con una narrativa envolvente, efectos visuales impresionantes y personajes inolvidables, Guerrero de las Sombras: Entre dos Bandos te sumergirá en un universo donde la línea entre lo humano y lo no humano se desdibuja.</p>
+				<p>Prepárate para una experiencia cinematográfica única que desafiará tus percepciones y te dejará ansioso por más.</p>
+				<p>Mantente atento para más detalles y el lanzamiento oficial.</p>
+			</div>
+		</section>
+
+		<!-- ===================== NOTICIAS ===================== -->
 		<section class="seccion--alterna">
 			<div class="contenedor">
+				<h1>Noticias</h1>
+				<hr>
 				<div class="rejilla-tarjetas">
 					<article class="tarjeta">
 						<a href="https://www.halowaypoint.com/news/halo-battle-for-the-blood-moon" target="_blank">
@@ -103,44 +136,11 @@
 							</div>
 						</a>
 					</article>
-					<article class="tarjeta">
-						<a href="https://www.halowaypoint.com/news/combined-arms-operation-launch" target="_blank">
-							<img src="./imaxes/noticias/noticia7.jpg" alt="Imagen Noticia 7">
-							<div class="ctarjeta">
-								<h2>Combined Arms Operation Launch</h2>
-								<p>From November 14 to December 19, Operation: COMBINED ARMS will be active, bringing a free 20-tier Operation Pass with new customization rewards. The iconic Mjolnir Mark V armor from <em>Halo: CE</em> and a playlist of beloved classic maps from <em>Halo 3</em> have also come to <em>Halo Infinite</em>...</p>
-							</div>
-						</a>
-					</article>
-					<article class="tarjeta">
-						<a href="https://www.halowaypoint.com/news/forge-features-021" target="_blank">
-							<img src="./imaxes/noticias/noticia8.jpg" alt="Imagen Noticia 8">
-							<div class="ctarjeta">
-								<h2>Forge Features: November 10, 2023</h2>
-								<p>More maps, more experiences, and more jaw-dropping creations leveraging the Forge AI Toolkit have been delivered since Season 5 launched. Being able to create your own mini-Firefight experience, recreate campaign missions, or lose hours of the day by way of various minigames means the options are...</p>
-							</div>
-						</a>	
-					</article>
-					<article class="tarjeta">
-						<a href="https://www.halowaypoint.com/news/flood-of-flavor" target="_blank">
-							<img src="./imaxes/noticias/noticia9.jpg" alt="Imagen Noticia 9">
-							<div class="ctarjeta">
-								<h2>Flood of Flavor</h2>
-								<p>Remember, remember the month of November... because it’s <em>Halo</em>’s anniversary month and marks the release of <em>Halo: CE</em>, <em>Halo 2</em>, <em>Halo 4</em>, and <em>Halo Infinite</em>!</p>
-								<p>It’s been an incredibly exciting time recently, with Season 5 having been out in the wild for a few weeks now and folks have gotten to grips with all its new additions-from new maps to...</p>
-							</div>
-						</a>	
-					</article>
-					<article class="tarjeta">
-						<a href="https://www.halowaypoint.com/news/spotlight-november-2023" target="_blank">
-							<img src="./imaxes/noticias/noticia10.jpg" alt="Imagen Noticia 10">
-							<div class="ctarjeta">
-								<h2>Spotlight: November 2, 2023</h2>
-								<p>Somehow, 2023 is coming to a close-we're in the home stretch now that Halloween has passed... but that just means it's an opportune time for us to look at some amazing new community creations.</p>
-								<p>Behold, our latest gathering of really cool stuff!...</p>
-							</div>
-						</a>	
-					</article>
+				</div>
+				<div class="contenedor">
+					<div class="boton boton--secundario">
+						<a href="./noticias.html">Ir a todas las noticias ></a>
+					</div>
 				</div>
 			</div>
 		</section>
