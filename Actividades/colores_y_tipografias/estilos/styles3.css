@@ -1,5 +1,9 @@
 /* ==========================================================================
-   PLANTILLA DE PRÁCTICA — colores y tipografía
+   ESTILO ALTO CONTRASTE
+   ========================================================================== */
+
+/* ==========================================================================
+   PLANTILLA DE PRÁCTICA — colores y tipografía 
 
    Todo lo que necesitas cambiar para experimentar con una paleta o una
    tipografía distinta está reunido aquí arriba, en :root. El resto de la
@@ -22,38 +26,38 @@
 
   /* ---- 1. COLOR DE FONDO GENERAL ----
      El fondo de la página y de las secciones "normales". */
-  --color-fondo: #00172e;
+  --color-fondo: #000000;
 
   /* ---- 2. COLOR DE FONDO ALTERNO ----
      Para secciones que quieres diferenciar del fondo general
      (ver clase .seccion--alterna en el HTML). */
-  --color-fondo-alterno: #002244;
+  --color-fondo-alterno: #121212;
 
   /* ---- 3. COLOR DE FONDO DE BLOQUES / TARJETAS ----
      El fondo de las tarjetas de producto y del bloque destacado. */
-  --color-bloque: rgba(5, 12, 22, 0.75);
+  --color-bloque: #1a1a1a;
   /*--color-bloque-borde: #E4DCCB;*/
 
   /* ---- 4. COLOR DE TEXTO ----
      Texto principal y texto secundario (más apagado, para descripciones). */
   --color-texto: #ffffff;
-  --color-texto-secundario: #b6c5d6;
+  --color-texto-secundario: #e0e0e0;
 
   /* ---- 5. COLOR DE BOTONES ----
      Botón primario (la acción principal) y su estado al pasar el ratón,
      más el botón secundario (acción menos importante). */
-  --color-boton-primario: #2e8b37;
-  --color-boton-primario-hover: #226428;
-  --color-boton-texto: #FFFFFF;
+  --color-boton-primario: #00ff66;
+  --color-boton-primario-hover: #00cc52;
+  --color-boton-texto: #000000;
 
   --color-boton-secundario: transparent;
-  --color-boton-secundario-hover: rgba(67, 127, 151, 0.2);
-  --color-boton-secundario-borde: #5cc2e6;
+  --color-boton-secundario-hover: rgba(0, 242, 254, 0.15);
+  --color-boton-secundario-borde: #00f2fe;
 
   /* ---- 6. COLOR DE ACENTO ---- 
      Úsalo con moderación: un detalle, no todo el fondo. Aquí se usa en el
      borde izquierdo del bloque destacado ("aside"). */
-  --color-acento: #ffbe26;
+  --color-acento: #ffff00;
 
   /* ---- 7. TIPOGRAFÍA ----
      --font-titulos se usa en h1, h2, h3.
@@ -83,6 +87,7 @@
      así que cambiar este valor escala toda la tipografía proporcionalmente. */
   --tamano-base: 17px;
 }
+
 
 /* ==========================================================================
    ESTILOS BASE
@@ -237,6 +242,9 @@ p {
   background-color: var(--color-boton-primario);
   color: var(--color-boton-texto);
   border: 1px solid var(--color-boton-primario);
+}
+.boton--primario a{
+  color: var(--color-boton-texto);
 }
 
 .boton--primario:hover {

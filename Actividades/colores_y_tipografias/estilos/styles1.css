@@ -27,33 +27,33 @@
   /* ---- 2. COLOR DE FONDO ALTERNO ----
      Para secciones que quieres diferenciar del fondo general
      (ver clase .seccion--alterna en el HTML). */
-  --color-fondo-alterno: #00173e;
+  --color-fondo-alterno: #002244;
 
   /* ---- 3. COLOR DE FONDO DE BLOQUES / TARJETAS ----
      El fondo de las tarjetas de producto y del bloque destacado. */
-  --color-bloque: rgba(10, 10, 10, 0.6);
+  --color-bloque: rgba(5, 12, 22, 0.75);
   /*--color-bloque-borde: #E4DCCB;*/
 
   /* ---- 4. COLOR DE TEXTO ----
      Texto principal y texto secundario (más apagado, para descripciones). */
   --color-texto: #ffffff;
-  --color-texto-secundario: #928589;
+  --color-texto-secundario: #b6c5d6;
 
   /* ---- 5. COLOR DE BOTONES ----
      Botón primario (la acción principal) y su estado al pasar el ratón,
      más el botón secundario (acción menos importante). */
-  --color-boton-primario: #4db652;
-  --color-boton-primario-hover: #45a049;
+  --color-boton-primario: #2e8b37;
+  --color-boton-primario-hover: #226428;
   --color-boton-texto: #FFFFFF;
 
   --color-boton-secundario: transparent;
-  --color-boton-secundario-hover: #437F97;
-  --color-boton-secundario-borde: #437F97;
+  --color-boton-secundario-hover: rgba(67, 127, 151, 0.2);
+  --color-boton-secundario-borde: #5cc2e6;
 
   /* ---- 6. COLOR DE ACENTO ---- 
      Úsalo con moderación: un detalle, no todo el fondo. Aquí se usa en el
      borde izquierdo del bloque destacado ("aside"). */
-  --color-acento: #FFB30F;
+  --color-acento: #ffbe26;
 
   /* ---- 7. TIPOGRAFÍA ----
      --font-titulos se usa en h1, h2, h3.
@@ -232,6 +232,7 @@ p {
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
+
 
 .boton--primario {
   background-color: var(--color-boton-primario);

@@ -1,5 +1,9 @@
 /* ==========================================================================
-   PLANTILLA DE PRÁCTICA — colores y tipografía
+    ESTILO SEGURO
+   ========================================================================== */
+
+/* ==========================================================================
+   PLANTILLA DE PRÁCTICA — colores y tipografía -- Variante Segura
 
    Todo lo que necesitas cambiar para experimentar con una paleta o una
    tipografía distinta está reunido aquí arriba, en :root. El resto de la
@@ -22,38 +26,38 @@
 
   /* ---- 1. COLOR DE FONDO GENERAL ----
      El fondo de la página y de las secciones "normales". */
-  --color-fondo: #000000;
+  --color-fondo: #00172e;
 
   /* ---- 2. COLOR DE FONDO ALTERNO ----
      Para secciones que quieres diferenciar del fondo general
      (ver clase .seccion--alterna en el HTML). */
-  --color-fondo-alterno: #121212;
+  --color-fondo-alterno: #002b4d;
 
   /* ---- 3. COLOR DE FONDO DE BLOQUES / TARJETAS ----
      El fondo de las tarjetas de producto y del bloque destacado. */
-  --color-bloque: #1a1a1a;
+  --color-bloque: #00365f;
   /*--color-bloque-borde: #E4DCCB;*/
 
   /* ---- 4. COLOR DE TEXTO ----
      Texto principal y texto secundario (más apagado, para descripciones). */
   --color-texto: #ffffff;
-  --color-texto-secundario: #e0e0e0;
+  --color-texto-secundario: #b6c5d6;
 
   /* ---- 5. COLOR DE BOTONES ----
      Botón primario (la acción principal) y su estado al pasar el ratón,
      más el botón secundario (acción menos importante). */
-  --color-boton-primario: #00ff66;
-  --color-boton-primario-hover: #00cc52;
-  --color-boton-texto: #000000;
+  --color-boton-primario: #145a7a;
+  --color-boton-primario-hover: #0d4058;
+  --color-boton-texto: #FFFFFF;
 
   --color-boton-secundario: transparent;
-  --color-boton-secundario-hover: rgba(0, 242, 254, 0.15);
-  --color-boton-secundario-borde: #00f2fe;
+  --color-boton-secundario-hover: #164766;
+  --color-boton-secundario-borde: #5cc2e6;
 
   /* ---- 6. COLOR DE ACENTO ---- 
      Úsalo con moderación: un detalle, no todo el fondo. Aquí se usa en el
      borde izquierdo del bloque destacado ("aside"). */
-  --color-acento: #ffff00;
+  --color-acento: #79c7e8;
 
   /* ---- 7. TIPOGRAFÍA ----
      --font-titulos se usa en h1, h2, h3.
@@ -81,7 +85,7 @@
 
   /* Tamaño base del texto; los demás tamaños están definidos en "em",
      así que cambiar este valor escala toda la tipografía proporcionalmente. */
-  --tamano-base: 19px;
+  --tamano-base: 17px;
 }
 
 /* ==========================================================================
@@ -286,6 +290,10 @@ p {
 .tarjeta a:hover {
   transition: background-color 0.3s ease, transform 0.3s ease;
   transform: scale(1.05);
+}
+
+.tarjeta a {
+  color: var(--color-texto);
 }
 
 .tarjeta img {
