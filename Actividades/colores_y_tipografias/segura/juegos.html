@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CosmicMountain Studios - Juegos</title>
+
+	<!-- Tipografías de Google Fonts: cambia estos nombres por otras que quieras
+       probar. Busca más en https://fonts.google.com y sustituye tanto el
+       enlace de aquí como las variables --font-heading / --font-body en
+       styles.css -->
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link id="mi-estilo" rel="stylesheet" type="text/css" href="../estilos/styles2.css">
+</head>
+<body>
+	<!-- ===================== CABECERA ===================== -->
+	<header class="cabecera">
+		<div class="contenedor cabecera__interior">
+			<a class="marca" href="./index.html">
+				<img src="../imaxes/logosl.png">
+				<p>CosmicMountain <br> Studios</p>
+			</a>
+			<nav class="navegacion" aria-label="Navegación principal">
+				<ul>
+					<li><a href="./index.html">Inicio</a></li>
+					<li><a href="./juegos.html">Juegos</a></li>
+					<li><a href="./noticias.html">Noticias</a></li>
+				</ul>
+			</nav>
+			<div class="boton boton--primario">
+				<a href="https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/?l=spanish">Adquirir ETS2</a>
+			</div>
+			<button class="boton" onclick="cambiarEstilo()">Cambiar estilo</button>
+
+			<script>
+				// Lista de tus archivos CSS en orden
+				const estilos = ['../estilos/styles1.css', '../estilos/styles2.css', '../estilos/styles3.css'];
+				let indiceActual = 0;
+
+				function cambiarEstilo() {
+				// Avanza al siguiente índice (0 -> 1 -> 2 -> 0 -> 1...)
+				indiceActual = (indiceActual + 1) % estilos.length;
+				
+				// Cambia la ruta del atributo href
+				document.getElementById('mi-estilo').href = estilos[indiceActual];
+				}
+			</script>	
+		</div>
+   	</header>
+	
+	<main>
+		<section class="seccion--alterna">
+			<div class="contenedor">
+				<div class="rejilla-tarjetas">
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/" target="_blank">
+							<img src="../imaxes/juegos/juego1.jpg" alt="Imagen Juego 1">
+							<div class="ctarjeta">
+								<h2>Euro Truck Simulator 2</h2>
+								<p>¡Viaja por Europa como el rey de la carretera, un camionero que entrega cargas importantes a distancias impresionantes! Con docenas de ciudades para explorar, tu resistencia, habilidad y velocidad serán llevadas al límite.</p>
+							</div>
+						</a>
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/526870/Satisfactory/" target="_blank">
+							<img src="../imaxes/juegos/juego2.jpg" alt="Imagen Juego 2">
+							<div class="ctarjeta">
+								<h2>Satisfactory</h2>
+								<p>Un juego de creación de fábricas de mundo abierto en primera persona con toques de exploración y combate. ¡Juega solo o con tus amigos, explora un planeta alienígena, construye fábricas de varias plantas y descubre un auténtico paraíso de cintas transportadoras!</p>
+							</div>
+						</a>
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/949230/Cities_Skylines_II/" target="_blank">
+							<img src="../imaxes/juegos/juego3.jpg" alt="Imagen Juego 3">
+							<div class="ctarjeta">
+								<h2>Cities Skylines II</h2>
+								<p>Construye una ciudad y haz que prospere con el constructor de ciudades más realista. Pon a prueba tu creatividad y tu resolución de problemas para construir a una escala que nunca experimentaste. Con su simulación y su economía, crea mundos sin límites.</p>
+							</div>
+						</a>	
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/739630/Phasmophobia/" target="_blank">
+							<img src="../imaxes/juegos/juego4.jpg" alt="Imagen Juego 4">
+							<div class="ctarjeta">
+								<h2>Phasmophobia</h2>
+								<p>Un terrorífico juego psicológico cooperativo en línea para 4 jugadores. La actividad paranormal va en aumento y depende de ti y de tu equipo utilizar todo el equipo de caza de fantasmas a tu disposición para reunir la mayor cantidad de pruebas posible.</p>
+							</div>
+						</a>	
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/1966720/Lethal_Company/" target="_blank">
+							<img src="../imaxes/juegos/juego5.jpg" alt="Imagen Juego 5">
+							<div class="ctarjeta">
+								<h2>Lethal Company</h2>
+								<p>Un terrorifico juego cooperativo sobre hurgar en lunas abandonadas para vender chatarra a la Compañía.</p>
+							</div>
+						</a>	
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/244210/Assetto_Corsa/" target="_blank">
+							<img src="../imaxes/juegos/juego6.jpg" alt="Imagen Juego 6">
+							<div class="ctarjeta">
+								<h2>Assetto Corsa</h2>
+								<p>Assetto Corsa v1.16 presenta la nueva pista escaneada con láser "Laguna Seca", 7 coches nuevos, entre los que se encuentra el esperado Alfa Romeo Giulia Quadrifoglio. ¡Consulta el registro de cambios para obtener más información!</p>
+							</div>
+						</a>
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/242760/The_Forest/" target="_blank">
+							<img src="../imaxes/juegos/juego7.jpg" alt="Imagen Juego 7">
+							<div class="ctarjeta">
+								<h2>The Forest</h2>
+								<p>Como único superviviente de un accidente de avión de pasajeros, te encuentras en un bosque misterioso luchando por sobrevivir contra una sociedad de mutantes caníbales. Construye, explora y sobrevive en este aterrador simulador de terror y supervivencia en primera persona.</p>
+							</div>
+						</a>
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/1127400/Mindustry/" target="_blank">
+							<img src="../imaxes/juegos/juego8.jpg" alt="Imagen Juego 8">
+							<div class="ctarjeta">
+								<h2>Mindustry</h2>
+								<p>Un Tower Defense abierto centrado en la gestión de recursos.</p>
+							</div>
+						</a>	
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/236390/War_Thunder/" target="_blank">
+							<img src="../imaxes/juegos/juego9.jpg" alt="Imagen Juego 9">
+							<div class="ctarjeta">
+								<h2>War Thunder</h2>
+								<p>Un juego de combate MMO gratuito de vehículos militares usados en la Segunda Guerra Mundial y la guerra de Corea. Lucha en grandes batallas de tierra, mar y aire con jugadores internacionales en un entorno en continuo desarrollo.</p>
+							</div>
+						</a>	
+					</article>
+					<article class="tarjeta">
+						<a href="https://store.steampowered.com/app/1318690/shapez/" target="_blank">
+							<img src="../imaxes/juegos/juego10.jpg" alt="Imagen Juego 10">
+							<div class="ctarjeta">
+								<h2>Shapez</h2>
+								<p>Un juego sobre construir fábricas para automatizar la creación y combinación de figuras cada vez más complejas en un mapa infinito.</p>
+							</div>
+						</a>	
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+     
+	<!-- ===================== PIE DE PÁGINA ===================== -->
+	<footer class="pie">
+		<div class="contenedor">
+			<p>&copy; 2023 CosmicMountain Studios - Todos los derechos reservados.</p>
+		</div>
+	</footer>
+</body>
+</html>
