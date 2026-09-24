@@ -1,124 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Práctica: iconos e imágenes</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica: iconos e imágenes</title>
 
-  <!-- Font Awesome: fuente de iconos vectoriales gratuita (ver apartado 8.1 del tema) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome: fuente de iconos vectoriales gratuita (ver apartado 8.1 del tema) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Práctica: iconos y composición de imágenes</h1>
 
-  <h1>Práctica: iconos y composición de imágenes</h1>
+    <!-- ===================== 1. BARRA DE ICONOS ===================== -->
+    <section>
+      <h2>1. Barra de iconos</h2>
+      <p>
+        Todos los iconos deben tener el mismo tamaño y estilo, y una alternativa
+        de texto para las personas que no puedan verlos (apartado 8.2 del tema).
+      </p>
 
-  <!-- ===================== 1. BARRA DE ICONOS ===================== -->
-  <section>
-    <h2>1. Barra de iconos</h2>
-    <p>
-      Todos los iconos deben tener el mismo tamaño y estilo, y una alternativa
-      de texto para las personas que no puedan verlos (apartado 8.2 del tema).
-    </p>
+      <nav class="barra-iconos">
+        <a href="#" class="icono" aria-label="Inicio">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="icono" aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="icono" aria-label="Carrito de la compra">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="icono" aria-label="Nuestro GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
 
-    <nav class="barra-iconos">
-      <a href="#" class="icono" aria-label="Inicio">
-        <i class="fa-solid fa-house" aria-hidden="true"></i>
-      </a>
-      <a href="#" class="icono" aria-label="Buscar">
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-      </a>
-      <a href="#" class="icono" aria-label="Carrito de la compra">
-        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-      </a>
-      <a href="#" class="icono" aria-label="Nuestro GitHub">
-        <i class="fa-brands fa-github" aria-hidden="true"></i>
-      </a>
-
-      <!-- TODO 1: añade aquí al menos 2 iconos más.
+        <!-- TODO 1: añade aquí al menos 2 iconos más.
            Busca su nombre de clase en https://fontawesome.com/icons
            (usa solo iconos marcados como "Free").
            Mantén siempre el mismo formato: <a> + aria-label + <i> -->
+        <a href="#" class="icono" aria-label="Correo electrónico">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="icono" aria-label="Youtube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </section>
 
-    </nav>
-  </section>
+    <!-- ===================== 2. REGLA DE LOS TERCIOS ===================== -->
+    <section>
+      <h2>2. Regla de los tercios</h2>
+      <p>
+        La rejilla roja marca los "puntos de fuerza" de cada imagen (ver
+        apartado 9 del tema). Sustituye las dos imágenes de ejemplo por otras
+        tuyas y comprueba si el sujeto principal cae cerca de alguno de esos
+        puntos.
+      </p>
 
-  <!-- ===================== 2. REGLA DE LOS TERCIOS ===================== -->
-  <section>
-    <h2>2. Regla de los tercios</h2>
-    <p>
-      La rejilla roja marca los "puntos de fuerza" de cada imagen (ver
-      apartado 9 del tema). Sustituye las dos imágenes de ejemplo por otras
-      tuyas y comprueba si el sujeto principal cae cerca de alguno de esos
-      puntos.
-    </p>
+      <div class="galeria-tercios">
+        <figure>
+          <div class="marco-tercios">
+            <img
+              src="https://picsum.photos/seed/tercios1/600/400"
+              alt="Imagen de ejemplo 1, sustitúyela por la tuya"
+            />
+            <!-- TODO 2a: cambia el src de esta imagen por una tuya propia -->
+          </div>
+          <figcaption>
+            [Escribe aquí: ¿el sujeto principal está en un punto de fuerza? ¿Sí
+            o no? ¿Por qué?]
+          </figcaption>
+        </figure>
 
-    <div class="galeria-tercios">
-      <figure>
-        <div class="marco-tercios">
-          <img src="https://picsum.photos/seed/tercios1/600/400" alt="Imagen de ejemplo 1, sustitúyela por la tuya">
-          <!-- TODO 2a: cambia el src de esta imagen por una tuya propia -->
-        </div>
-        <figcaption>
-          [Escribe aquí: ¿el sujeto principal está en un punto de fuerza? ¿Sí o no? ¿Por qué?]
-        </figcaption>
-      </figure>
+        <figure>
+          <div class="marco-tercios">
+            <img
+              src="https://picsum.photos/seed/tercios2/600/400"
+              alt="Imagen de ejemplo 2, sustitúyela por la tuya"
+            />
+            <!-- TODO 2b: cambia el src de esta imagen por otra tuya -->
+          </div>
+          <figcaption>
+            [Escribe aquí: ¿el sujeto principal está en un punto de fuerza? ¿Sí
+            o no? ¿Por qué?]
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-      <figure>
-        <div class="marco-tercios">
-          <img src="https://picsum.photos/seed/tercios2/600/400" alt="Imagen de ejemplo 2, sustitúyela por la tuya">
-          <!-- TODO 2b: cambia el src de esta imagen por otra tuya -->
-        </div>
-        <figcaption>
-          [Escribe aquí: ¿el sujeto principal está en un punto de fuerza? ¿Sí o no? ¿Por qué?]
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+    <!-- ===================== 3. ÁNGULOS FOTOGRÁFICOS ===================== -->
+    <section>
+      <h2>3. Ángulos fotográficos</h2>
+      <p>
+        Para cada imagen, indica qué ángulo crees que se ha usado (normal,
+        contrapicado, picado, nadir o cenital) y en qué tipo de página web lo
+        usarías.
+      </p>
 
-  <!-- ===================== 3. ÁNGULOS FOTOGRÁFICOS ===================== -->
-  <section>
-    <h2>3. Ángulos fotográficos</h2>
-    <p>
-      Para cada imagen, indica qué ángulo crees que se ha usado (normal,
-      contrapicado, picado, nadir o cenital) y en qué tipo de página web lo
-      usarías.
-    </p>
+      <div class="galeria-angulos">
+        <figure>
+          <img
+            src="https://picsum.photos/seed/angulo1/500/350"
+            alt="Imagen de ejemplo para identificar el ángulo, sustitúyela por la tuya"
+          />
+          <figcaption>
+            <label
+              >Ángulo:
+              <select>
+                <option value="">-- elige --</option>
+                <option>Normal</option>
+                <option>Contrapicado</option>
+                <option>Picado</option>
+                <option>Nadir</option>
+                <option>Cenital</option>
+              </select>
+            </label>
+            <p>[¿En qué tipo de web usarías este ángulo, y por qué?]</p>
+          </figcaption>
+        </figure>
 
-    <div class="galeria-angulos">
-      <figure>
-        <img src="https://picsum.photos/seed/angulo1/500/350" alt="Imagen de ejemplo para identificar el ángulo, sustitúyela por la tuya">
-        <figcaption>
-          <label>Ángulo:
-            <select>
-              <option value="">-- elige --</option>
-              <option>Normal</option>
-              <option>Contrapicado</option>
-              <option>Picado</option>
-              <option>Nadir</option>
-              <option>Cenital</option>
-            </select>
-          </label>
-          <p>[¿En qué tipo de web usarías este ángulo, y por qué?]</p>
-        </figcaption>
-      </figure>
-
-      <!-- TODO 3: duplica este bloque <figure> dos veces más, con dos
+        <!-- TODO 3: duplica este bloque <figure> dos veces más, con dos
            imágenes propias que muestren ángulos distintos entre sí -->
-    </div>
+        <figure>
+          <img
+            src="https://picsum.photos/seed/angulo1/500/350"
+            alt="Imagen de ejemplo para identificar el ángulo, sustitúyela por la tuya"
+          />
+          <figcaption>
+            <label
+              >Ángulo:
+              <select>
+                <option value="">-- elige --</option>
+                <option>Normal</option>
+                <option>Contrapicado</option>
+                <option>Picado</option>
+                <option>Nadir</option>
+                <option>Cenital</option>
+              </select>
+            </label>
+            <p>[¿En qué tipo de web usarías este ángulo, y por qué?]</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/seed/angulo1/500/350"
+            alt="Imagen de ejemplo para identificar el ángulo, sustitúyela por la tuya"
+          />
+          <figcaption>
+            <label
+              >Ángulo:
+              <select>
+                <option value="">-- elige --</option>
+                <option>Normal</option>
+                <option>Contrapicado</option>
+                <option>Picado</option>
+                <option>Nadir</option>
+                <option>Cenital</option>
+              </select>
+            </label>
+            <p>[¿En qué tipo de web usarías este ángulo, y por qué?]</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-  </section>
-
-  <!-- ===================== 4. REFLEXIÓN FINAL ===================== -->
-  <section>
-    <h2>4. Reflexión final</h2>
-    <p>
-      [TODO 4: en 3-4 líneas, explica por qué es mejor usar una fuente de
-      iconos en vez de imágenes sueltas para los iconos de una web. Relaciona
-      tu respuesta con el apartado 8 del tema.]
-    </p>
-  </section>
-
-</body>
+    <!-- ===================== 4. REFLEXIÓN FINAL ===================== -->
+    <section>
+      <h2>4. Reflexión final</h2>
+      <p>
+        [TODO 4: en 3-4 líneas, explica por qué es mejor usar una fuente de
+        iconos en vez de imágenes sueltas para los iconos de una web. Relaciona
+        tu respuesta con el apartado 8 del tema.]
+      </p>
+    </section>
+  </body>
 </html>
