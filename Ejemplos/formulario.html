@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input text</title>
+    <style>
+        form label,
+        form input,
+        form button{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#" method="post" target="_blank" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre_text">Nombre</label>
+            <input type="text" id="nombre-text" name="nombre-text" 
+                    placeholder="introduce tu nombre">
+                    
+            <label for="apellidos_text">Apellidos</label>
+            <input type="text" id="apelllidos-text" name="apellidos-text"
+                    placeholder="introduce tus apellidos">
+
+            <label> Email:
+                <input type="email" name="email" 
+                placeholder="correo@edu.xunta.gal" required>
+            </label>
+
+            <label for="tel-contacto">Teléfono</label>
+            <input type="tel" id="tel-contacto" name="tel-contacto"
+            required pattern="[0-9]{9}">
+
+            <label for="fecha">Fecha</label>
+            <input type="datetime-local" name="fecha">
+
+            <button>Enviar contacto</button>
+
+        </fieldset>
+
+        </form>
+
+</body>
+</html>
