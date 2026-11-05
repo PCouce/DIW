@@ -59,11 +59,11 @@ a[href] {
 
 /* 11. Selecciona los enlaces cuyo href comience por https y añade un borde inferior.*/
 a[href^="https"] {
-    border-bottom: solid 1px #000000;
+    border-bottom: dotted 1px;
 }
 
 /*12. Selecciona los enlaces cuyo href contenga la palabra mailto y cambia su color.*/
-a[href~="mailto"] {
+a[href*="mailto"] {
     color: blueviolet;
 }
 
@@ -92,7 +92,7 @@ ul :first-child {
 
 /* 17. :last-child: aplica un borde inferior al último elemento de cada lista.*/
 ul :last-child {
-    border-bottom: #000000 solid 1px;
+    border-bottom: double 1px;
 }
 
 /* 18. :nth-child(2): aplica un fondo diferente al segundo elemento de la lista (article) de noticias. */
@@ -123,12 +123,12 @@ h3::after {
 }
 
 /* 23. ::first-letter: aumenta el tamaño de la primera letra de los párrafos de las noticias.*/
-.noticias p::first-letter {
-    font-size: 6rem;
+#noticias p::first-letter {
+    font-size: 2rem;
 }
 
 /* 24. ::first-line: muestra en negrita la primera línea de los párrafos de la sección de noticias.*/
-.noticias p::first-line {
+#noticias p::first-line {
     font-weight: bold;
 }
 /* 25. ::selection: establece un fondo azul y texto blanco cuando el usuario seleccione texto de la página.*/
