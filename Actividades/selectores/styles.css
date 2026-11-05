@@ -25,6 +25,7 @@ h2 {
 h1,
 h2,
 h3 {
+    color: darkgreen;
 }
 
 /*B. SELECTORES COMBINADORES*/
@@ -69,29 +70,69 @@ a[href~="mailto"] {
 /* D. PSEUDOCLASES */
 
 /* 13. :hover: cuando el ratón pase sobre un enlace, cambia su color y elimina el subrayado.*/
+a:hover {
+    color: red;
+    text-decoration: none;
+}
 
 /* 14. :active: mientras se pulsa un enlace, cambia su fondo.*/
+a:active {
+    background-color: chartreuse;
+}
 
 /* 15. :visited: los enlaces visitados deben tener otro color. */
+a:visited {
+    color: crimson;
+}
 
 /* 16. :first-child: aplica negrita al primer elemento de cada lista. */
+ul :first-child {
+    font-weight: bold;
+}
 
 /* 17. :last-child: aplica un borde inferior al último elemento de cada lista.*/
+ul :last-child {
+    border-bottom: #000000 solid 1px;
+}
 
 /* 18. :nth-child(2): aplica un fondo diferente al segundo elemento de la lista (article) de noticias. */
+ul :nth-child(2) {
+    background-color: aquamarine;
+}
 
 /* 19. :not(.destacado): aplica un borde a todos los ciclos que no tengan la clase destacado.*/
+.ciclo:not(.destacado) {
+    border: solid;
+}
 
 /* 20. :focus: cuando un enlace reciba el foco mediante el teclado, debe mostrar un contorno visible.*/
+a:focus {
+    border: solid;
+}
 
 /* E. PSEUDOELEMENTOS */
 
 /* 21. ::before: añade un símbolo decorativo antes del texto de cada título h2.*/
+h2::before {
+    content: "✦ ";
+}
 
 /* 22. ::after: añade un texto - Más información después de los títulos h3 de los ciclos.*/
+h3::after {
+    content: " Más información";
+}
 
 /* 23. ::first-letter: aumenta el tamaño de la primera letra de los párrafos de las noticias.*/
+.noticias p::first-letter {
+    font-size: 6rem;
+}
 
 /* 24. ::first-line: muestra en negrita la primera línea de los párrafos de la sección de noticias.*/
-
+.noticias p::first-line {
+    font-weight: bold;
+}
 /* 25. ::selection: establece un fondo azul y texto blanco cuando el usuario seleccione texto de la página.*/
+::selection {
+    background-color: blue;
+    color: white;
+}
