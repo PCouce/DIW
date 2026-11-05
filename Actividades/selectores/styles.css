@@ -119,7 +119,7 @@ h2::before {
 
 /* 22. ::after: añade un texto - Más información después de los títulos h3 de los ciclos.*/
 h3::after {
-    content: " Más información";
+    content: " - Más información";
 }
 
 /* 23. ::first-letter: aumenta el tamaño de la primera letra de los párrafos de las noticias.*/
